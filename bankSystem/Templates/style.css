@@ -1,0 +1,28 @@
+p input:focus{
+   font-style: normal;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: bolder;
+   font-size: 15px;
+   color:rgb(65, 105, 236);
+}
+.btn-action{
+   text-decoration: none;
+   padding:4px 8px;
+   border: none;
+   border-radius: 3px;
+   color: white;
+   
+}
+
+.btn-action.view{
+   background-color: rgb(87, 87, 236);
+}
+.btn-action.edit{
+   background-color: rgb(240, 175, 56);
+}
+.btn-danger{
+   background-color:rgb(158, 14, 14);
+   color: white;
+   border:none;
+   border-radius: 3px;
+}

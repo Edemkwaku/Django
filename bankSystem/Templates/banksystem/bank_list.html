@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Bank List{% endblock title %}
+{% block body %}
+
+   
+    <ul>
+    <table class="table" id='table'>
+        <thead><h1>Banks</h1></thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Street</th>
+            <th>Action</th>
+        </tr>
+    
+    {% for Bank in object_list %}
+        
+        <tr id='row'>
+            <td>{{ Bank.code}}</td>
+            <td>{{ Bank.name}}</td> 
+            <td>{{ Bank.city }}</td>
+            <td>{{ Bank.street}}</td>
+            <td><div>
+                    <a href="{% url 'bank_details' Bank.code %}"class="btn-action view" >View</a>
+                    <a href="{% url 'bank_update' Bank.code %}" class="btn-action edit">Edit</a>
+                    <a href="{% url 'bank_delete' Bank.code %}" class="btn-action delete">Delete</a>
+            </div></td>
+        </tr>
+        
+    {% empty %}
+        <div>No Banks yet.</div>
+    {% endfor %}
+
+    </table>
+    
+    </ul>
+    <button onclick="hide()" id='hide'>hide table</button>
+    <button onclick="show()" id='show'>show table</button>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Bank List{% endblock title %}
+{% block body %}
+
+   <h1>{{ object.name }}</h1>
+    <div styte="border:1px solid black">
+        <p>Code : {{ object.code }}</p>
+        <p>Name: {{ object.name }}</p>
+        <p>City: {{ object.city }}</p>
+        <p>Street: {{ object.street }}</p>
+    </div>
+{% endblock %}
